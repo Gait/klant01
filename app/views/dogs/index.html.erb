@@ -1,0 +1,28 @@
+<h1>Honden</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Klant</th>
+      <th>Hond</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.customer_id %></td>
+        <td><%= dog.dog %></td>
+        <td><%= link_to 'Details', dog %></td>
+        <td><%= link_to 'Wijzig', edit_dog_path(dog) %></td>
+        <td><%= link_to 'Delete', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Hond Toevoegen', new_dog_path %>

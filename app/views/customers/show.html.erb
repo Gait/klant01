@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3><strong>Klant:</strong>
+  <%= @customer.name %></h3><br>
+<table class="table table-bordered table-hover " >
+  <tr>
+    <th>Hond</th>
+    <th>Datum</th>
+  </tr>
+  <% @dogs.each do |d| %>
+  <tr>
+    <td><%= d.dog %></td>
+    <td><%=d.created_at.strftime ('%A %d %B %Y') %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) , class: "btn btn-warning" %> |
+<%= link_to 'Back', customers_path, class: "btn btn-warning" %>
+
+
