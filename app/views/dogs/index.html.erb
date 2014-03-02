@@ -13,7 +13,7 @@
   <tbody>
     <% @dogs.each do |dog| %>
       <tr>
-        <td><%= dog.customer_id %></td>
+        <td><%= dog.customer.name %></td>
         <td><%= dog.dog %></td>
         <td><%= link_to 'Details', dog %></td>
         <td><%= link_to 'Wijzig', edit_dog_path(dog) %></td>

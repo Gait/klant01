@@ -10,7 +10,7 @@ class DogsController < ApplicationController
   # GET /dogs/1
   # GET /dogs/1.json
   def show
-    @customer = dog
+    @dog = Dog.find(params[:id])
   end
 
   # GET /dogs/new
