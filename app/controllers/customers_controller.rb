@@ -10,7 +10,6 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
-    @customer = Customer.find(params[:id])
     @dogs = @customer.dogs.all
   end
 
